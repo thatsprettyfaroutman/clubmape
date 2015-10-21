@@ -1,0 +1,48 @@
+{
+  "name": "clubmape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.0.4",
+    "gulp-util": "^3.0.7",
+    "jspm": "^0.16.12"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "web"
+    },
+    "dependencies": {
+      "ai/compass.js": "github:ai/compass.js@^0.1.1",
+      "core-js": "npm:core-js@^0.9.4",
+      "driftyco/ionicons": "github:driftyco/ionicons@2.0.1",
+      "google-maps-api": "npm:google-maps-api@^1.1.0",
+      "jquery": "npm:jquery@1",
+      "lodash": "npm:lodash@^3.10.1",
+      "modernizr": "github:Modernizr/Modernizr@^2.8.3",
+      "normalize.css": "npm:normalize.css@^3.0.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4",
+      "traceur": "github:jmcriffey/bower-traceur@0.0.91",
+      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91"
+    },
+    "overrides": {
+      "github:ai/compass.js@0.1.1": {
+        "main": "lib/compass"
+      }
+    }
+  }
+}

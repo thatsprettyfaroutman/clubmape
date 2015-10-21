@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Titillium+Web:400,300,700|Lato:300,400,700);
+@import url(../jspm_packages/npm/normalize.css@3.0.3/normalize.css);
+@import url(../jspm_packages/github/driftyco/ionicons@2.0.1/css/ionicons.css);
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7);
+    transform: rotate(0deg) scale(0.7); }
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.7);
+    transform: rotate(360deg) scale(0.7); } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7);
+    transform: rotate(0deg) scale(0.7); }
+  100% {
+    -webkit-transform: rotate(360deg) scale(0.7);
+    transform: rotate(360deg) scale(0.7); } }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans, Helvetica, Arial, sans-serif; }
+
+.clubmape {
+  position: relative;
+  height: 100%;
+  background-color: #fbd159;
+  padding-top: 40px;
+  box-sizing: border-box; }
+
+.clubmape__circle {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  padding: 0; }
+
+.clubmape__circle__circle,
+.clubmape__circle__bottle {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0; }
+
+.clubmape__circle__bottle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.clubmape__distance {
+  position: relative;
+  margin-top: 40px;
+  padding: 0 40px;
+  font-size: 80px;
+  font-weight: 700;
+  color: #204181;
+  text-align: center;
+  line-height: 110px; }
+  .clubmape__distance:after {
+    position: absolute;
+    content: 'm';
+    font-size: 25%;
+    line-height: 110px; }

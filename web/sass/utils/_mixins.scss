@@ -1,0 +1,91 @@
+@mixin addColors($class, $prop, $lighten : 0) {
+	$colors : () !default;
+	@each $color in $colors {
+		&.#{ $class + "--" + nth($color, 1) } {
+			@if $lighten < 0 {
+				#{$prop} : darken(nth($color, 2), $lighten * -1);
+			} @else {
+				#{$prop} : lighten(nth($color, 2), $lighten);
+			}
+		}
+	}
+}
+
+@mixin addHoverColors($class, $prop, $lighten : 0) {
+	$colors : () !default;
+	@each $color in $colors {
+		&.#{ $class + "--" + nth($color, 1) }:hover {
+			@if $lighten < 0 {
+				#{$prop} : darken(nth($color, 2), $lighten * -1);
+			} @else {
+				#{$prop} : lighten(nth($color, 2), $lighten);
+			}
+		}
+	}
+}
+
+@mixin clearAfter {
+	&::after {
+		display : block;
+		content : "\0020";
+		width : 0;
+		height : 0;
+		margin : 0;
+		padding : 0;
+		clear : both;
+		float : none;
+	}
+}
+
+@mixin prefix($prop, $value) {
+	-webkit-#{$prop} : $value;
+	-moz-#{$prop} : $value;
+	-ms-#{$prop} : $value;
+	-o-#{$prop} : $value;
+	#{$prop} : $value;
+}
+
+@mixin hoverShadow($shadowStrength : 0.2, $hoverOffset : -4px) {
+	box-shadow : 0 0 0 rgba($dark, 0);
+	transform : translateY(0px);
+	transition : transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+	&:hover {
+		box-shadow : 0 4px 2px rgba($dark, $shadowStrength);
+		transform : translateY($hoverOffset);
+	}
+}
+
+@mixin triangle ($direction : 'down', $border-width : 20px, $color : #f0f) {
+	display : block;
+	width : 0;
+	height : 0;
+
+	border-top : none;
+	border-right : none;
+	border-bottom : none;
+	border-left : none;
+
+	@if $direction == 'up' {
+		border-left: $border-width solid transparent;
+		border-right: $border-width solid transparent;
+		border-bottom: $border-width solid $color;
+	} @else if $direction == 'down' {
+		border-left: $border-width solid transparent;
+		border-right: $border-width solid transparent;
+		border-top: $border-width solid $color;
+	} @else if $direction == 'right' {
+		border-top: $border-width solid transparent;
+		border-bottom: $border-width solid transparent;
+		border-left: $border-width solid $color;
+	} @else { // left
+		border-top: $border-width solid transparent;
+		border-bottom: $border-width solid transparent;
+		border-right: $border-width solid $color;
+	}
+}
+
+@mixin faIcon($icon) {
+	font-family : 'FontAwesome';
+	content : $icon;
+}

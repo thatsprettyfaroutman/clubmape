@@ -1,0 +1,58 @@
+$block : 'clubmape';
+
+.#{$block} {
+	position : relative;
+	height : 100%;
+	background-color : $yellow;
+	padding-top : 40px;
+	box-sizing : border-box;
+}
+
+.#{$block}__circle {
+	position : relative;
+	width : 320px - 80;
+	height : 320px - 80;
+	margin : 0 auto;
+	padding : 0;
+}
+
+.#{$block}__circle__circle,
+.#{$block}__circle__bottle {
+	display : block;
+	width : 100%;
+	height : auto;
+	margin : 0;
+	padding : 0;
+}
+
+.#{$block}__circle__bottle {
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : auto;
+	transform : scale(0.7);
+
+	animation-name : spin;
+	animation-duration: (1s / 5);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.#{$block}__distance {
+	position : relative;
+	margin-top : 40px;
+	padding : 0 40px;
+	font-size : 80px;
+	font-weight: 700;
+	color : $blue;
+	text-align : center;
+	line-height : 110px;
+
+	&:after {
+		position : absolute;
+		content : 'm';
+		font-size: 25%;
+		line-height : 110px;
+	}
+}

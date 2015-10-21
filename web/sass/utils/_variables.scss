@@ -1,0 +1,58 @@
+// $fa-font-path : "../jspm_packages/npm/font-awesome@4.4.0/fonts";
+
+$font-huge : 60px;
+$font-great : 42px;
+$font-large : 36px;
+$font-medium : 30px;
+$font-small : 18px;
+$font-tiny : 15px;
+
+$font-h1 : $font-huge;
+$font-h2 : $font-great;
+$font-h3 : $font-large;
+$font-h4 : $font-medium;
+$font-h5 : $font-small;
+$font-h6 : $font-tiny;
+
+$font-h1-phone : 40px;
+$font-h1-phone : $font-large;
+$font-h1-phone : $font-medium;
+$font-h1-phone : 24px;
+$font-h1-phone : $font-small;
+$font-h1-phone : $font-tiny;
+
+$font-titillium : Titillium Web, Helvetica, Arial, sans-serif;
+$font-opensans : Open Sans, Helvetica, Arial, sans-serif;
+$font-lato : Lato, Helvetica, Arial, sans-serif;
+$font-default : $font-opensans;
+
+$dark : #222;
+$light : #fff;
+$gray : #ecf0f1;
+$yellow : #fbd159;
+$blue : #204181;
+$red : #cd4632;
+
+$colors :
+	('dark' $dark)
+	('light' $light)
+	('gray' $gray);
+
+$air : 20px;
+
+$default-animation-time : 200ms;
+
+$media-phone-portrait : "all and ( max-width : 320px )";
+$media-phone : "all and ( max-width : 767px )";
+$media-phone-landscape : $media-phone;
+$media-tablet-and-phone : "all and ( max-width : 1023px )";
+$media-tablet : "all and ( max-width : 1023px ) and ( min-width : 768px )";
+$media-tablet-portrait : $media-tablet;
+$media-tablet-landscape : "all and ( max-width : 1024px ) and ( min-width : 769px )";
+$media-desktop-and-tablet : "all and ( min-width : 768px )";
+$media-desktop : "all and ( min-width : 1024px )";
+
+$media-from-tablet-landscape : "all and ( max-width : 1024px )";
+$media-from-tablet-portrait : "all and ( max-width : 768px )";
+$media-from-phone-landscape : "all and ( max-width : 767px )";
+$media-from-phone-portrait : "all and ( max-width : 320px )";
